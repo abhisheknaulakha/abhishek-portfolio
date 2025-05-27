@@ -1,0 +1,217 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('background_img.jpg') no-repeat center center/cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #00ffe1;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00ffe1;
+}
+
+/* Add spacing to sections so nav doesn't overlap */
+.section {
+  padding-top: 80px;
+}
+
+/* Hamburger styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  width: 25px;
+}
+
+.hamburger span {
+  height: 3px;
+  background: #00ffe1;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* On smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    /* height of navbar */
+    right: -250px;
+    /* hide offscreen */
+    width: 200px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+    transition: right 0.3s ease;
+    z-index: 9999;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide nav links on small screen by default */
+  .nav-links li {
+    margin: 0;
+  }
+
+  /* Only show logo (name) on navbar */
+  .nav-links {
+    display: flex;
+  }
+
+  /* When nav is active (menu open) */
+  .nav-links.active {
+    right: 0;
+  }
+}
+
+
+/* Section base styles */
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.content {
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+  animation: fadeUp 1s ease-in-out;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h1 span {
+  color: #00ffe1;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p,
+ul {
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Resume Section Button Style */
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #00ffe1;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  background-color: #00c2a8;
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p,
+  ul {
+    font-size: 1.1rem;
+  }
+}
