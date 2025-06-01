@@ -1,11 +1,9 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Background with dark overlay */
 body, html {
   height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,7 +22,6 @@ body::before {
   z-index: -1;
 }
 
-/* Navbar */
 .navbar {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
@@ -74,7 +71,6 @@ body::before {
   border-radius: 2px;
 }
 
-/* Responsive Navbar */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -97,7 +93,6 @@ body::before {
   }
 }
 
-/* Animation keyframes */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -109,7 +104,6 @@ body::before {
   }
 }
 
-/* Sections */
 .section {
   animation: fadeInUp 1s ease forwards;
   opacity: 0;
@@ -127,7 +121,6 @@ body::before {
   color: #00ffe1;
 }
 
-/* Hero */
 .hero h1 {
   font-size: 3rem;
   animation: fadeInUp 1.5s ease forwards;
@@ -144,7 +137,6 @@ body::before {
   margin-top: 20px;
 }
 
-/* Buttons */
 .btn {
   display: inline-block;
   margin: 15px 10px 0;
@@ -163,7 +155,6 @@ body::before {
   box-shadow: 0 0 8px #00ffe1;
 }
 
-/* About Section */
 .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -184,7 +175,6 @@ body::before {
   object-fit: cover;
 }
 
-/* Skills Section */
 #skills ul {
   list-style-type: none;
   font-size: 1.2rem;
@@ -208,7 +198,6 @@ body::before {
   color: #00ffe1;
 }
 
-/* Projects Section */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -262,7 +251,6 @@ body::before {
   box-shadow: 0 0 10px #00ffe1;
 }
 
-/* Contact Section */
 .contact-form {
   max-width: 500px;
   margin: 0 auto;
@@ -301,7 +289,6 @@ body::before {
   background-color: #00c2a8;
 }
 
-/* Responsive About Section */
 @media (max-width: 600px) {
   .about-content {
     flex-direction: column;
